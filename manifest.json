@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+
+  "name": "BEAUD",
+  "description": "Adapt your favorite web pages and that you use the most. With BEAUD you will be able to automate all those information search processes that you carry out daily or frequently.",
+  "version": "0.2.3",
+
+
+  "permissions": [
+  	 "webRequest", "declarativeNetRequest",
+     "contextMenus",
+     "storage", 	 
+     "unlimitedStorage",
+	 "activeTab",
+	 "scripting",
+     "tabs"
+  ],
+   "host_permissions": ["<all_urls>"],
+  "background": {
+     "service_worker": "background.js",
+	 "type": "module"
+   },
+     
+   "action": {
+     "default_icon": {"16":"icono.png"},
+     "default_popup": "parts/popup.html",
+	 "default_title": "Personalize the Web!"
+  },
+  "web_accessible_resources": [{
+        "resources": ["js/*","parts/*"],
+        "matches": [],
+       "extension_ids": []
+      }],
+   
+   "content_scripts": [
+    {
+	  "matches": ["*://*/*"],
+	  "css": ["css/jquery-ui-1.10.3.custom.css", "css/webSearch.css"],
+      "js": ["js/jquery-2.0.3.min.js", "js/beaud.js", "js/htmlclipper.js", "js/xpath.js"]
+    }
+  ]
+}
