@@ -10,7 +10,7 @@ BEAUD uses the Manifest V3 version
 * Microsoft Edge 97 version or later
 
 # How to create an adaptation using BEAUD
-> You can follow [this video](https://youtu.be/l4aKh5ptfxI) that creates a sample with the BEAUD extension 
+> You can follow [this video](https://youtu.be/Lpx8GLybNUs) that creates a sample with the BEAUD extension 
 
 Step 1. If the extension is not installed, activate browser developer mode.
 
